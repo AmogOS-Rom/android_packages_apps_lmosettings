@@ -50,4 +50,7 @@
     <!-- Whether to show Ambient Edge Light feature in Settings Options -->
     <bool name="config_show_ambient_edge_light">true</bool>
 
+    <!-- Whether SELinux status should be shown or not. -->
+    <bool name="config_show_selinux_status">true</bool>
+
 </resources>
