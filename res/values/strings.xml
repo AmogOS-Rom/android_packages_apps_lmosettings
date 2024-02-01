@@ -783,5 +783,10 @@
     <!-- Navbar -->
     <string name="navbar_tuner_title">Navbar tuner</string>
     <string name="navbar_tuner_summary">Customize your navbar layout</string>
+    <string name="qs_transparency_title">Background transparency</string>
+    <string name="qs_transparency_summary">Set transparency level for QS background</string>
+
+    <!-- Maintainer -->
+    <string name="maintainer">Maintainer</string>
 
 </resources>
