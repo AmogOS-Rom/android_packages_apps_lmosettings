@@ -72,7 +72,7 @@
     <string name="berry_black_theme_summary">Pure black background for dark theme</string>
 
     <!-- About phone screen, LMODroid version -->
-    <string name="rom_version_title">LMODroid version</string>
+    <string name="rom_version_title">AmogOS version</string>
 
     <!-- Button settings - Generic stuff used everywhere -->
     <string name="reset">Reset</string>
