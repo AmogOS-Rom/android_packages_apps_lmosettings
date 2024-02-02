@@ -711,5 +711,8 @@
     <!-- Label for device's hardware ram size [CHAR LIMIT=40] -->
     <string name="total_ram">Total RAM</string>
 
+    <!-- AdBlock -->
+    <string name="enable_adblock">Enable AdBlock</string>
+    <string name="enable_adblock_summary">Blocks various ads and trackers system-wide.</string>
 
 </resources>
