@@ -156,8 +156,8 @@
 
     <string-array name="status_bar_battery_percentage_entries" translatable="false">
         <item>@string/status_bar_battery_percentage_default</item>
-        <item>@string/status_bar_battery_percentage_text_inside</item>
         <item>@string/status_bar_battery_percentage_text_next</item>
+        <item>@string/status_bar_battery_percentage_text_inside</item>
     </string-array>
 
     <string-array name="status_bar_battery_percentage_values" translatable="false">
@@ -451,6 +451,31 @@
 
 
     <string-array name="qs_tile_shape_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <!-- Restrict USB -->
+    <string-array name="trust_restrict_usb_entries" translatable="false">
+        <item>@string/trust_restrict_usb_always</item>
+        <item>@string/trust_restrict_usb_keyguard</item>
+        <item>@string/trust_restrict_usb_disabled</item>
+    </string-array>
+
+    <string-array name="trust_restrict_usb_values" translatable="false">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <!-- Transient task mode -->
+    <string-array name="transient_task_mode_entries">
+        <item>@string/transient_task_mode_default</item>
+        <item>@string/transient_task_mode_allow</item>
+        <item>@string/transient_task_mode_force</item>
+    </string-array>
+    
+    <string-array name="transient_task_mode_values">
         <item>0</item>
         <item>1</item>
         <item>2</item>

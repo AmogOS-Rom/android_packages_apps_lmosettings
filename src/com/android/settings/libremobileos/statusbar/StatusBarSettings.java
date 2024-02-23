@@ -5,6 +5,7 @@
  */
 package com.android.settings.libremobileos.statusbar;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
@@ -186,5 +187,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.status_bar_settings);
+            new BaseSearchIndexProvider(R.xml.status_bar_settings) {
+
+        @Override
+        protected boolean isPageSearchEnabled(Context context) {
+            // Enable page search only if LMO features are available.
+            return context.getResources()
+                    .getBoolean(R.bool.config_show_lmo_features_settings);
+        }
+
+    };
 }

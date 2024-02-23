@@ -177,6 +177,10 @@
     <string name="power_menu_advanced_restart_title">Advanced restart</string>
     <string name="power_menu_advanced_restart_summary">When unlocked, include options in the power menu for restarting into recovery or bootloader</string>
     <string name="power_menu_emergency_affordance_enabled">Emergency affordance is enabled</string>
+    <!-- Text shown for the title of the panic option -->
+    <string name="power_menu_panic_title">Panic trigger</string>
+    <!-- Text shown for the description of the panic option -->
+    <string name="power_menu_panic_summary">Activates an emergency panic trigger.</string>
 
     <string name="camera_double_tap_power_gesture_title">Press power button twice for camera</string>
 
@@ -760,4 +764,34 @@
     <string name="qs_auto_brightness_title">Auto brightness icon</string>
     <string name="qs_auto_brightness_summary">Show toggle for adaptive brightness near the slider</string>
 
+    <!-- Hide apps - App info screen -->
+    <string name="hide">Hide</string>
+    <string name="hidden">Hidden</string>
+    <string name="unhide">Unhide</string>
+    <string name="hide_app">Hide app</string>
+    <string name="unhide_app">Unhide app</string>
+    <string name="unhide_app_desc">If you unhide this app, it will be visible to Android and other apps again.</string>
+    <string name="hide_app_desc">If you hide this app, it will not be visible to Android and other apps, and they may no longer function as intended. Keep in mind, hiding an app preserves it data. By hiding, you turn this app off and hide it on your device.</string>
+    <!-- Label for showing hidden apps in list [CHAR LIMIT=40] -->
+    <string name="filter_hidden_apps">Hidden apps</string>
+
+    <!-- Restrict USB -->
+    <string name="trust_restrict_usb_title">Restrict USB</string>
+    <string name="trust_restrict_usb_summary">Control support for USB peripherals such as input (mice, keyboards, joysticks) and storage devices.</string>
+    <string name="trust_restrict_usb_always">Deny USB connections</string>
+    <string name="trust_restrict_usb_keyguard">Allow USB connections when unlocked</string>
+    <string name="trust_restrict_usb_disabled">Always allow USB connections</string>
+
+    <!-- Transient task mode (Tadi mode) -->
+    <string name="transient_task_mode_title">Transient task mode</string>
+    <string name="transient_task_mode_dialog_title">Transient task mode (Reboot your device to apply changes)</string>
+    <string name="transient_task_mode_summary">Dismiss apps from recents when last activity gets closed using back button.</string>
+    <string name="transient_task_mode_default">Disable (Default)</string>
+    <string name="transient_task_mode_allow">Enable (Some apps will stay)</string>
+    <string name="transient_task_mode_force">Force (Override app behaviour)</string>
+
+    <!-- Per-app volume control -->
+    <string name="app_volume">App volume</string>
+    <string name="app_volume_title">Per-app volume control</string>
+    <string name="app_volume_summary">Allow to set different volume levels for each app</string>
 </resources>
