@@ -475,6 +475,12 @@
         <item>@string/qs_tile_mix</item>
     </string-array>
 
+    <string-array name="qs_tile_shape_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <!-- Prevent pointer acceleration -->
     <string-array name="prevent_pointer_acceleration_entries">
         <item>@string/prevent_pointer_acceleration_full</item>
