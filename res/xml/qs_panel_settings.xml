@@ -103,5 +103,14 @@
             android:defaultValue="6"
             settings:textStart="@string/qs_columns_landscape_min"
             settings:textEnd="@string/qs_columns_landscape_max" />
+
+        <!-- LeafOS Credits -->
+        <Preference
+            android:key="leafos_credits"
+            android:title="@string/leafos_credits"
+            android:summary="@string/leafos_credits_summary"
+            android:selectable="false"
+            settings:enableCopying="false" />
+
     </PreferenceCategory>
 </PreferenceScreen>
