@@ -21,6 +21,9 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.TwoStatePreference;
+import android.content.Context;
+import com.android.internal.util.SystemRestartUtils;
 
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
@@ -28,9 +31,13 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 @SearchIndexable
-public class QSPanelSettings extends DashboardFragment {
+public class QSPanelSettings extends DashboardFragment implements Preference.OnPreferenceChangeListener {
 
+    static final int SETTING_VALUE_OFF = 0;
+    static final int SETTING_VALUE_ON = 1;
     private static final String KEY_QS_SHOW_AUTO_BRIGHTNESS = "qs_show_auto_brightness";
+    private static final String KEY_QS_DUAL_TONE = "is_dual_tone";
+    private Preference dualTonePreference;
     private static final String TAG = "QSPanelSettings";
     private static final String[] qsCustPreferences = { "qs_tile_shape",
             "qqs_num_columns", "qqs_num_columns_landscape",
@@ -42,6 +49,8 @@ public class QSPanelSettings extends DashboardFragment {
 
         PreferenceScreen preferenceScreen = getPreferenceScreen();
         Preference qsShowAutoBrightnessPreference = preferenceScreen.findPreference(KEY_QS_SHOW_AUTO_BRIGHTNESS);
+        dualTonePreference = preferenceScreen.findPreference(KEY_QS_DUAL_TONE);
+        dualTonePreference.setOnPreferenceChangeListener(this);
 
         if (qsShowAutoBrightnessPreference != null) {
             boolean automaticBrightnessAvailable = getContext().getResources().getBoolean(
@@ -63,6 +72,21 @@ public class QSPanelSettings extends DashboardFragment {
             }
         }
     }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == dualTonePreference) {
+            Context mContext = getContext();
+            final boolean isEnabled = (Boolean) newValue;
+            Settings.System.putIntForUser(getContext().getContentResolver(),
+            "is_dual_tone",
+            isEnabled ? SETTING_VALUE_ON : SETTING_VALUE_OFF, UserHandle.USER_CURRENT);
+            SystemRestartUtils.showSystemUIRestartDialog(getContext());
+            return true;
+        }
+        return true;
+    }
+
 
     @Override
     public int getMetricsCategory() {

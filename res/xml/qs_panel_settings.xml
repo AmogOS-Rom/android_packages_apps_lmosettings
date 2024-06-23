@@ -49,6 +49,11 @@
             android:title="@string/qs_auto_brightness_title"
             android:summary="@string/qs_auto_brightness_summary"
             android:defaultValue="true" />
+
+        <com.android.settings.support.SecureSettingSwitchPreference
+            android:key="is_dual_tone"
+            android:title="Enable Dual-Tone QS Style"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
